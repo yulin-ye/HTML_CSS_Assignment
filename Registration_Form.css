@@ -1,0 +1,137 @@
+.sign-up-page {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+}
+
+form textarea {
+  background-color: #e6e6e6;
+  border: 0;
+}
+form .submit-button:hover {
+  cursor: pointer;
+}
+form section {
+  display: flex;
+  flex-direction: column;
+}
+form .section-title::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: green;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+@media (width <= 600px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    font-family: sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #f2f2f2;
+  }
+  .general-item {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+  }
+  .input-box {
+    background-color: #e6e6e6;
+    border: 0;
+    height: 30px;
+    font-size: 16px;
+  }
+  .gender {
+    margin-top: 5px;
+    margin-bottom: 18px;
+  }
+  .password-hint {
+    font-size: 16px;
+  }
+  label {
+    font-size: 20px;
+  }
+  select {
+    font-size: 20px;
+  }
+  .Ts-and-Cs {
+    margin-top: 20px;
+    display: flex;
+  }
+  .submit-button {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(51, 204, 51);
+    color: white;
+    margin-top: 5px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  .section-title {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+}
+@media (width > 600px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    font-family: sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f2f2f2;
+  }
+  .general-item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+  }
+  .input-box {
+    background-color: #e6e6e6;
+    border: 0;
+    height: 30px;
+    font-size: 16px;
+  }
+  .gender {
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+  .password-hint {
+    font-size: 16px;
+  }
+  label {
+    font-size: 16px;
+  }
+  select {
+    font-size: 14px;
+  }
+  .Ts-and-Cs {
+    margin-top: 16px;
+    display: flex;
+    font-size: 16px;
+  }
+  .submit-button {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(51, 204, 51);
+    color: white;
+    margin-top: 5px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 24px;
+  }
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=Registration_Form.css.map */

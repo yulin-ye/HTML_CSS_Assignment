@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Registration_Form.css">
+  </link>
+  <title>Registration Form</title>
+</head>
+
+<body class="sign-up-page">
+  <div class="main">
+    <h1 class="title">Sign Up</h1>
+    <form action="XXX.php" method="post">
+      <section>
+        <p class="section-title">Your basic info</p>
+        <div class="general-item">
+          <label>First Name:</label>
+          <input class="input-box" required/>
+        </div>
+        <div class="general-item">
+          <label>Last Name:</label>
+          <input class="input-box" required/>
+        </div>
+        <div class="general-item">
+          <label>Email:</label>
+          <input type="email" placeholder="abc123@example.com" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$" class="input-box" required/>
+        </div>
+        <div class="general-item">
+          <label>Username:</label>
+          <input class="input-box" required/>
+        </div>
+        <div class="general-item">
+          <label>Password:</label>
+          <p class="password-hint">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>
+          <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="input-box" required/>
+        </div>
+        <div id="confirmPasswordDiv" class="general-item">
+          <label>Confirm Password:</label>
+          <input type="password" id="confirmPassword" class="input-box" oninput="checkPassword(this)" required/>
+        </div>
+      </section>
+      <section>
+        <p class="section-title">Other details</p>
+        <div class="general-item">
+          <label>Birth Date:</label>
+          <input type="date" class="input-box" required/>
+        </div>
+        <div class="gender">
+          <label>Gender:</label>
+          <div>
+            <input type="radio" value="Male" name="gender" required/>
+            <label>Male</label>
+          </div>
+          <div>
+            <input type="radio" value="Female" name="gender" />
+            <label>Female</label>
+          </div>
+          <div>
+            <input type="radio" value="Other" name="gender" />
+            <label>Other</label>
+          </div>
+        </div>
+        <div class="general-item">
+          <label>Profession:</label>
+          <select class="input-box" name="profession" required>
+            <option value="web_development">Web Development</option>
+            <option value="data_analytics">Data Analytics</option>
+            <option value="ui_ux_design">UI/UX Design</option>
+          </select>
+        </div>
+        <div class="general-item">
+          <label>About me</label>
+          <textarea  rows="10" cols="40"></textarea>
+        </div>
+      </section>
+      <div class="Ts-and-Cs">
+        <input type="checkbox" required/>
+        <p>I'm accepting Terms and Conditions</p>
+      </div>
+      <div>
+        <input class="submit-button" type="submit" value="Sign Up"/>
+      </div>
+    </form>
+  </div>
+  <script>
+    function checkPassword() {
+      var firstPassword = document.getElementById('password').value
+      var confirmPassword = document.getElementById('confirmPassword').value
+      var warningElement = document.getElementById('warning')
+
+      if (firstPassword !== confirmPassword && !warningElement) {
+        var warningElement = document.createElement('p')
+        warningElement.setAttribute('id', 'warning')
+        warningElement.style['color'] = 'red'
+        warningElement.innerHTML = 'Your passwords do not match!'
+        document.getElementById('confirmPasswordDiv').appendChild(warningElement)
+      } else if (firstPassword === confirmPassword && warningElement) {
+        warningElement.remove()
+      }
+    }
+
+  </script>
+</body>
+
+</html>
